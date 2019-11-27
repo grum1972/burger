@@ -183,7 +183,7 @@ html, body {
   text-transform: uppercase; }
 
 .first-page {
-  background: url("/img/bg/texture.png"), url("/img/bg/video-bg.png") center center/cover no-repeat;
+  background: url("../img/bg/texture.png"), url("../img/bg/video-bg.png") center center/cover no-repeat;
   position: relative; }
 
 .first-page__container {
@@ -229,7 +229,7 @@ html, body {
   width: 29px;
   height: 14px;
   border: none;
-  background: url("/img/icons/arrow-scroll.svg") center center/cover no-repeat;
+  background: url("../img/icons/arrow-scroll.svg") center center/cover no-repeat;
   display: block;
   position: absolute;
   bottom: 30px;
@@ -280,7 +280,7 @@ html, body {
   border-color: #fff; }
 
 .best {
-  background: url("/img/bg/bg.png") center center/cover no-repeat;
+  background: url("../img/bg/bg.png") center center/cover no-repeat;
   color: #2f3234; }
 
 .best__container {
