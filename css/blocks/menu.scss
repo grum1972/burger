@@ -1,0 +1,43 @@
+.menu {
+	flex-grow: 1;
+	margin-left: 70px;
+	display: flex;
+	justify-content:space-between;
+}
+
+.menu-list {
+	display: flex;
+}
+
+.menu__item{
+	display: flex;
+	align-items: center;
+	margin-right: 17px;
+	position: relative;
+	
+	&:before{
+	content: "";
+	width: 4px;
+  height: 4px;
+	background-color: $white;
+  border-radius: 50%;
+  display: block;
+  margin-right: 15px;
+	}
+
+	&:first-child:before {
+		content: "";
+		display: none;
+	}
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.menu__link {
+	text-decoration: none;
+	color: $white;
+	font-family: 'Ubuntu';
+	font-size: 13px;
+	text-transform: uppercase;
+}

@@ -1,0 +1,32 @@
+.dot-menu {
+  position: fixed;
+  top: 90px;
+  right: 55px;
+  z-index: 10;
+}
+
+.dot-menu__dot {
+  display: block;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  margin-bottom: 5px;
+	position: relative; 
+}
+
+.dot-menu__dot:before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: $white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dot-menu__dot--active {
+	border-color: $white;
+}

@@ -1,0 +1,36 @@
+// colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$white: #fff;
+$dark-grey: #2f3234;
+$orange-two: #e35028;
+
+
+//normalize
+@import "./setup/normalize.css";
+
+//setups
+@import "./setup/font.scss";
+@import "./setup/base.scss";
+
+
+//blocks
+@import "./blocks/header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/btn.scss";
+@import "./blocks/first-page.scss";
+@import "./blocks/dot-menu.scss";
+@import "./blocks/best.scss";
+@import "./blocks/reviews.scss";
+
+
+
+
+
+
+
+
+
+
+  

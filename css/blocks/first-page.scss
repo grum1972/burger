@@ -1,0 +1,58 @@
+.first-page {
+	background: url("/img/bg/texture.png"), url("/img/bg/video-bg.png") center center / cover no-repeat;
+	position: relative;
+}
+.first-page__container {
+	height: 100%;
+	display: flex;
+}
+.first-page__content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.first-page__pic {
+	margin-left: 20px;
+	flex-shrink: 0;
+	overflow: hidden;
+	width: 450px;
+	height: 425px;
+	}
+
+.first-page__title {
+	padding-top: 55px;
+	margin-left: 10px;
+	
+}
+
+.first-page__subtitle {
+	margin-top: 20px;
+	font-family: Lifehack;
+  font-size: 65px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 0.92;
+	letter-spacing: -1.63px;
+	color: $white;
+}
+
+.first-page__arrow {
+	width: 29px;
+	height: 14px;
+	border: none;
+	background: url("/img/icons/arrow-scroll.svg") center center / cover no-repeat;;
+	display: block;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 0;
+	cursor: pointer;
+}
+
+.first-page__img {
+	width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
