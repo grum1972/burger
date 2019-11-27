@@ -277,7 +277,8 @@ html, body {
   transform: translate(-50%, -50%); }
 
 .dot-menu__dot--active {
-  border-color: #fff; }
+	border-color: #fff; 
+}
 
 .best {
   background: url("../img/bg/bg.png") center center/cover no-repeat;
