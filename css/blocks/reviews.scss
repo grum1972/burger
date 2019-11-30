@@ -56,7 +56,11 @@
 .btn--reviews {
 	margin-top: 17px;
 	background: $dark-grey;
-	border: none;
+
+	&:hover {
+		background: #1f2122;
+	}
+	
 }
 
 .reviews__desc {
