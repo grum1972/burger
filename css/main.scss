@@ -7,8 +7,7 @@ $orange-two: #e35028;
 
 
 //normalize
-@import "./setup/normalize.css";
-
+@import "./setup/normalize.scss";
 
 //setups
 @import "./setup/font.scss";
@@ -24,6 +23,7 @@ $orange-two: #e35028;
 @import "./blocks/dot-menu.scss";
 @import "./blocks/best.scss";
 @import "./blocks/reviews.scss";
+@import "./blocks/team.scss";
 
 
 
