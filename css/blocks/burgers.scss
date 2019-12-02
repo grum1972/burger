@@ -1,0 +1,91 @@
+.burgers {
+	background: url("../img/bg/hamburger_bg.jpg") 50% no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.title__burgers {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+}
+
+.burgers__list {
+	display: flex;
+	height: 100%;
+	justify-content: flex-end;
+}
+
+.burgers__item {
+		display: flex;
+	}
+
+	.burgers__link {
+		width: rem(80px);
+		@include phones {
+			width: rem(64px);
+		}
+		height: 100%;
+		text-decoration: none;
+		background-image: url('../img/bg/menu_burgers_meet.png');
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		position: relative;
+	}
+
+.burgers__link-text {
+	font-size: rem(40px); 
+	color: #fff;
+	font-family: Gagalin;
+	font-weight: normal;
+	text-align: center;
+	white-space: nowrap;
+	position: absolute;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  margin-top: rem(-40px);
+}	
+
+.burgers__link--meat {
+	background-image: url('../img/bg/menu_burgers_meet.png');
+}
+.burgers__link--veg {
+	background-image: url('../img/bg/menu_burgers.png');
+}
+.burgers__link--diet {
+	background-image: url('../img/bg/burgers_menu_diet.png');
+}
+.burgers__item {
+	&.active {
+		.burgers__link-text {
+			color: $yellow;
+		}
+	}
+}
+
+
+.burgers__text {
+		width: rem(550px);
+		@include phones {
+			width: 90%;
+		}
+		padding: rem(60px) rem(30px);
+		font-family: Ubuntu;
+  	font-size: rem(14px);
+  	font-weight: 300;
+  	font-style: normal;
+  	line-height: 1.71;
+  	letter-spacing: normal;
+		text-align: left;
+		color: $white;
+		background-color: $dark-grey;
+		opacity: 0.9;
+		display: none;
+}
+
+.active .burgers__text{
+	display: flex;
+}
