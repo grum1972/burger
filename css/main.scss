@@ -10,8 +10,10 @@ $orange-two: #e35028;
 @import "./setup/normalize.scss";
 
 //setups
+@import "./setup/media.scss";
 @import "./setup/font.scss";
 @import "./setup/base.scss";
+
 
 
 //blocks

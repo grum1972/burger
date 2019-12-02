@@ -4,30 +4,32 @@
 	display: flex;
 	align-items: center;
 }
+
 .form__title {
-	margin-bottom: 40px;
+	margin-bottom: rem(40px);
 }
 
 .form__label-title {
 	display: block;
-		font-family: Ubuntu;
-		font-size: 14px;
-		font-weight: 300;
-		font-style: normal;
-		line-height: 1.71;
-		letter-spacing: normal;
-		text-align: left;
-		color: $white;
+	font-family: Ubuntu;
+	font-size: rem(14px);
+	font-weight: 300;
+	font-style: normal;
+	line-height: 1.71;
+	letter-spacing: normal;
+	text-align: left;
+	color: $white;
 }
+
 .form__radio-title {
-		font-family: Ubuntu;
-		font-size: 14px;
-		font-weight: 300;
-		font-style: normal;
-		line-height: 1.71;
-		letter-spacing: normal;
-		text-align: left;
-		color: $white;
+	font-family: Ubuntu;
+	font-size: rem(14px);
+	font-weight: 300;
+	font-style: normal;
+	line-height: 1.71;
+	letter-spacing: normal;
+	text-align: left;
+	color: $white;
 }
 
 .form__wrapper {
@@ -36,26 +38,40 @@
 
 .form__content {
 	display: flex;
+	
+	@include tablets {
+	flex-direction: column;
+	align-items: center;
+	}
+
 } 
 
 .form__block {
-	margin-left: 20px;
+	margin-left: rem(20px);
 	width: 50%;
+	@include phones {
+		width: 100%;
+	}
 	display: flex;
 	flex-direction: column;
+	
+	@include tablets {
+		margin-left: rem(0px);
+	}
+
 }	
 
 .form__block--left {
-	margin-left: 0px;
+	margin-left: rem(0px);
 	
 }	
 
 .form__input {
-	padding-left: 20px; ;
-	height: 36px;
-	border-radius: 5px;
+	padding-left: rem(20px); ;
+	height: rem(36px);
+	border-radius: rem(5px);
 	outline: none;
-  border: solid 2px transparent;
+  border: solid rem(2px) transparent;
 	background-color:	$white;
 	width: 100%;
 	&:focus {
@@ -68,21 +84,33 @@
 }
 
 .form__row {
-display: flex;
-margin-bottom: 18px;
+	display: flex;
+	margin-bottom: rem(18px);
+
+	@include phones {
+		justify-content: center;	
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .form__label {
 	flex: 1;
-	margin-left: 20px;
+	margin-left: rem(20px);
 
 	&:first-child{
 		margin-left: 0;
 	}
-}
 
+}
+.form__label-phones {
+	@include phones {
+		display: none;
+	}
+}
 .form__textarea {
-	min-height: 115px;
+	min-height: rem(115px);
 	resize: none;
 }
 
@@ -91,13 +119,13 @@ margin-bottom: 18px;
 	
 }
 .form__radio-label {
-	margin-right: 20px;
+	margin-right: rem(20px);
 	display: flex;
 	align-items: center;
 	}
 
 .form__radio-label:last-child	 {
-	margin-right: 0px;
+	margin-right: rem(0px);
 }
 
 .form__radio-input {
@@ -105,10 +133,9 @@ margin-bottom: 18px;
  }
 
 .form__radio-fake {
-	// display: block;
-	width: 16px;
-	height: 16px;
-	border: 1px solid $white;
+	width: rem(16px);
+	height: rem(16px);
+	border: rem(1px) solid $white;
 	background-color: #fff;
 	border-radius: 50%;
 	position: relative;
@@ -130,21 +157,18 @@ margin-bottom: 18px;
 
 
 .form__radio-title {
-	margin-left: 10px;
+	margin-left: rem(10px);
 }
-// .form__radio-input:checked + .form__radio-fake {
-// 	border-color: $white;
-// }
 
 .form__radio-input:checked + .form__radio-fake:after {
-	width: 8px;
-	height: 8px;
+	width: rem(8px);
+	height: rem(8px);
 }
 
 .form__radio-fake-checkbox {
-	width: 16px;
-	height: 16px;
-	border: 1px solid $white;
+	width: rem(16px);
+	height: rem(16px);
+	border: rem(1px) solid $white;
 	background-color: #fff;
 	display: flex;
 	align-items: center;
@@ -152,10 +176,9 @@ margin-bottom: 18px;
 
 .form__radio-fake-checkbox:after {
 	content: '';
-	width: 16px;
-	height: 16px;
-	// display: block;
-	background-image: url(/img/icons/checkmark.png);
+	width: rem(16px);
+	height: rem(16px);
+	background-image: url(../img/icons/checkmark.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 }
@@ -166,13 +189,12 @@ margin-bottom: 18px;
 }
 
 .form__row--textarea {
-	margin-bottom: 10px;
+	margin-bottom: rem(10px);
 } 
 
 .form__input::placeholder {
-
-color: $dark-grey;
-font-size: 14px;
-font-family: ubuntu;
-font-weight: 300;
+	color: $dark-grey;
+	font-size: rem(14px);
+	font-family: ubuntu;
+	font-weight: 300;
 }
