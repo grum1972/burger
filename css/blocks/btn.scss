@@ -9,3 +9,19 @@
 	text-transform: uppercase;
 	border: none;
 }
+
+.btn--reset{
+	padding: 11px 14px;
+	background: transparent;
+	border-radius: 5px;
+	font-family: 'Ubuntu';
+	font-size: 13px;
+	font-weight: 500;
+	color: $white;
+	text-transform: none;
+	border: 1px solid transparent;
+	&:hover {
+		border: 1px solid $yellow;
+		
+	}
+}

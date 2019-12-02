@@ -1,0 +1,24 @@
+.socials {
+
+	display: flex;
+	justify-content: flex-end;
+}
+.socials__item {
+	margin-left: 20px;
+}
+
+.socials__link {
+	max-width: 24px;
+	max-height: 20px;
+	opacity: .3;
+	transition: .3s;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.socials__link-icon {
+  width: 20px;
+  height: 20px;
+}

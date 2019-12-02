@@ -1,33 +1,136 @@
 .team {
-	background: url("../img/bg/bg.png") center center / cover no-repeat;
-	color: $dark-grey;
+	background: url("../img/bg/team_bg.jpg") 50% no-repeat;
+	background-size: cover;
 }
 
 .team__container {
 	height: 100%;
-}
-
-.team__promo {
-	height: 100%;
 	display: flex;
-	width: 100%;
-	border: 4px solid green;
-	position: relative;
-	align-items: flex-start;
-}
+	justify-content: flex-end;
+	}
 
 .team__content {
-	position: absolute;
-	top: 0;
-	right: 0;
 	width: 50%;
-	height: 100%;
-	border: 4px solid red;
-	text-align: center;
+	background-color: $dark-grey;
+	opacity: 0.9;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 100px;
+	
 }
 
- .title__team {
- line-height: 0.89;
-	width: 100%;
-	padding: 100px;
+.title__team {
+	margin-bottom: 45px;
+	
+}
+
+.team__list {
+	
+	margin-left: 18px;
+}
+
+.team__item {
+	margin-bottom: 35px;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.active {
+		.team__member {
+			color: $yellow;
+			&:before {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+
+}
+
+.team__desc {
+	padding-top: 14px;
+	display: none;
+}
+.active .team__desc{
+	padding-top: 14px;
+	display: flex;
+	align-items: center;
+}
+ .team__member {
+	margin-bottom: 20px;
+	font-family: Gagalin;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 2;
+  letter-spacing: normal;
+	color: $white;
+	position: relative;
+
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		top: 8px;
+		left: -18px;
+		width: 0;
+		height: 0;
+	}
+	&:before {
+		border-top: 7px solid $yellow;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 0px solid transparent;
+		transform: rotate(0deg);
+		transition: .3s;
+	}
+	&:after {
+		display: none;
+		border-bottom: 7px solid $yellow;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 0px solid transparent;
+	}
+ }
+
+ .team__avatar {
+	width: 100px;
+	height: 100px;
+	flex-shrink: 0;
+	border-radius: 50%;
+	overflow: hidden;
+	display: inline-block;
+ }
+
+ .team__img {
+  width: 100%;
+	height: 100%;
+	object-fit: cover;
+  object-position: center;
+ }
+
+ .team__text {
+	 margin-left: 20px;
+ }
+
+ .team__profession{
+	font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: bold;
+   font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: left;
+	color: $white;
+	margin-bottom: 10px;
+ }
+
+ .team__text-content{
+		font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: left;
+  color: $white;
  }
