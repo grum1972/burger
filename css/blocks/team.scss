@@ -55,7 +55,7 @@
 		margin-bottom: 0;
 	}
 
-	&.active {
+	&.team__item--active {
 		.team__member {
 			color: $yellow;
 			&:before {
@@ -70,7 +70,7 @@
 	padding-top: rem(14px);
 	display: none;
 }
-.active .team__desc{
+.team__item--active .team__desc{
 	padding-top: rem(14px);
 	display: flex;
 	
