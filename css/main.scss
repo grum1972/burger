@@ -18,15 +18,17 @@ $orange-two: #e35028;
 
 //blocks
 @import "./blocks/header.scss";
+@import "./blocks/hamburger-menu.scss";
 @import "./blocks/logo.scss";
 @import "./blocks/menu.scss";
 @import "./blocks/btn.scss";
 @import "./blocks/first-page.scss";
 @import "./blocks/dot-menu.scss";
 @import "./blocks/best.scss";
+@import "./blocks/burgers.scss";
 @import "./blocks/reviews.scss";
 @import "./blocks/team.scss";
-@import "./blocks/burgers.scss";
+@import "./blocks/menu-burgers.scss";
 @import "./blocks/form.scss";
 @import "./blocks/map.scss";
 @import "./blocks/footer.scss";
