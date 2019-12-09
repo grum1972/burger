@@ -1,11 +1,27 @@
 .btn{
-	padding: 11px 14px;
+	padding: rem(11px) rem(14px);
 	background: $orange;
-	border-radius: 5px;
+	border-radius: rem(5px);
 	font-family: 'Ubuntu';
-	font-size: 13px;
+	font-size: rem(13px);
 	font-weight: 500;
 	color: $white;
-	display: flex;
 	text-transform: uppercase;
+	border: none;
+}
+
+.btn--reset{
+	padding: rem(11px) rem(14px);
+	background: transparent;
+	border-radius: rem(5px);
+	font-family: 'Ubuntu';
+	font-size: rem(13px);
+	font-weight: 500;
+	color: $white;
+	text-transform: none;
+	border: rem(1px) solid transparent;
+	&:hover {
+		border: rem(1px) solid $yellow;
+		
+	}
 }

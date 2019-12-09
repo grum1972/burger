@@ -1,49 +1,81 @@
 .first-page {
-	background: url("/img/bg/texture.png"), url("/img/bg/video-bg.png") center center / cover no-repeat;
+	background: url("../img/bg/texture.png"), url("../img/bg/video-bg.png") center center / cover no-repeat;
 	position: relative;
+	
+	@include tablets {
+		padding-bottom: rem(100px);
+	}
+
 }
 .first-page__container {
 	height: 100%;
 	display: flex;
-}
+	}
+
 .first-page__content{
 	display: flex;
+
+	@include tablets {
+		flex-direction: column;
+	}
+
 	align-items: center;
 	justify-content: center;
 }
+
 .first-page__pic {
-	margin-left: 20px;
+	margin-left: rem(20px);
+	
 	flex-shrink: 0;
-	overflow: hidden;
-	width: 450px;
-	height: 425px;
+
+	@include tablets {
+		flex-shrink: 1;	
 	}
 
+	overflow: hidden;
+}
+
 .first-page__title {
-	padding-top: 55px;
-	margin-left: 10px;
+	padding-top: rem(55px);
+	margin-left: rem(10px);
+	@include small-phones {
+		margin-left: rem(0px);
+	}
+	@include tablets {
+		padding-top: rem(20px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 	
 }
 
 .first-page__subtitle {
-	margin-top: 20px;
+	margin-top: rem(20px);
 	font-family: Lifehack;
-  font-size: 65px;
+  font-size: rem(65px);
   font-weight: 500;
   font-style: normal;
   line-height: 0.92;
 	letter-spacing: -1.63px;
 	color: $white;
+
+	@include tablets {
+		text-align: center;
+		padding: 0 rem(20px);	
+	}
+	@include small-phones {
+		padding: 0 rem(10px);	
+	}
 }
 
 .first-page__arrow {
-	width: 29px;
-	height: 14px;
+	width: rem(29px);
+	height: rem(17px);
 	border: none;
-	background: url("/img/icons/arrow-scroll.svg") center center / cover no-repeat;;
-	display: block;
+	background: url("../img/icons/arrow-scroll.svg") center center / cover no-repeat;
 	position: absolute;
-	bottom: 30px;
+	bottom: rem(30px);
 	left: 50%;
 	transform: translateX(-50%);
 	font-size: 0;
