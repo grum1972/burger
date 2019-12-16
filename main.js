@@ -30,3 +30,80 @@ function menuClose() {
 	}
 }
 hamburgerMenu();
+
+// function controlVertAcco() {
+// 	const element = document.querySelector(".team__list");
+// 	const items	= document.querySelectorAll(".team__item");
+// 	element.addEventListener('click',e => {
+// 	e.preventDefault();
+// 	target = e.target;
+// 	let pt = target.parentElement;
+// 	console.log(pt);
+// 	let currentDesc = pt.querySelector(".team__desc");
+// 	if ((pt.classList.contains("team__item")&&(target.classList.contains("team__member")))) {
+// 		if (!pt.classList.contains("team__item--active")) {
+// 				items.forEach(function(item) {
+				
+// 					currentDesc.style.height = "0px";
+// 					item.classList.remove("team__item--active");
+// 			})
+// 			pt.classList.add("team__item--active");
+// 			currentDesc.style.height = currentDesc.scrollHeight +"px";
+// 		} else {
+// 			currentDesc.style.height = "0px";
+// 			pt.classList.remove("team__item--active");
+			
+// 		}
+// 	}
+// })
+	
+// }
+// controlVertAcco();
+
+ function controlVertAcco1() {
+	const element = document.querySelector(".team__list");
+	element.addEventListener('click',e => {
+	e.preventDefault();
+	target = e.target;
+	let flagLink = target.classList.contains("team__member");
+	if (flagLink) {
+		curActive = element.querySelector(".team__item--active");
+		flagActive = target.parentElement.classList.contains("team__item--active");
+		if (curActive) {
+			  const activeDesc = curActive.querySelector(".team__desc");
+				activeDesc.style.height = "0px";
+				curActive.classList.remove("team__item--active");	
+		}
+		if (!curActive || curActive.querySelector(".team__member") !== target) {
+			target.parentElement.classList.add("team__item--active");
+			let currentDesc = target.parentElement.querySelector(".team__desc");
+			currentDesc.style.height = currentDesc.scrollHeight+"px";
+		}
+	}
+	})
+};
+controlVertAcco1();
+
+function controlHorAccor() {
+	const element = document.querySelector(".menu-burgers__list");
+	element.addEventListener('click',e => {
+	e.preventDefault();
+	target = e.target;
+	let flagLink = target.classList.contains("team__member");
+	if (flagLink) {
+		curActive = element.querySelector(".team__item--active");
+		flagActive = target.parentElement.classList.contains("team__item--active");
+		if (curActive) {
+			  const activeDesc = curActive.querySelector(".team__desc");
+				activeDesc.style.height = "0px";
+				curActive.classList.remove("team__item--active");	
+		}
+		if (!curActive || curActive.querySelector(".team__member") !== target) {
+			target.parentElement.classList.add("team__item--active");
+			let currentDesc = target.parentElement.querySelector(".team__desc");
+			currentDesc.style.height = currentDesc.scrollHeight+"px";
+		}
+	}
+	})
+};
+controlHorAccor();
