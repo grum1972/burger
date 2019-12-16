@@ -68,20 +68,17 @@
 
 .team__desc {
 	padding-top: rem(14px);
-	// display: flex;
 	height: 0px;
 	overflow: hidden;	
-	transition: height 0.3s;
+	 transition: height 0.5s;
 	
 	}
 .team__item--active .team__desc{
 	padding-top: rem(14px);
-	// display: flex;
+	display: flex;
 	overflow: hidden;
-	height: 100%;
-	transition: height 0.3s;
-	
-	
+	transition: height 0.5s;
+		
 		
 	@include tablets {
 	flex-direction: column;

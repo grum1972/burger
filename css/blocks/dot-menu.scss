@@ -2,7 +2,7 @@
   position: fixed;
   top: rem(90px);
   right: rem(55px);
-	z-index: 10;
+	z-index: 105;
 	
 	@include phones {
 		display: none;

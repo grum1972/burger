@@ -741,7 +741,7 @@ html, body {
   position: fixed;
   top: 5.625rem;
   right: 3.4375rem;
-  z-index: 10; }
+  z-index: 105; }
   @media screen and (max-width: 480px) {
     .dot-menu {
       display: none; } }
@@ -1165,13 +1165,13 @@ html, body {
   padding-top: 0.875rem;
   height: 0px;
   overflow: hidden;
-  transition: height 0.3s; }
+  transition: height 0.5s; }
 
 .team__item--active .team__desc {
   padding-top: 0.875rem;
+  display: flex;
   overflow: hidden;
-  height: 100%;
-  transition: height 0.3s;
+  transition: height 0.5s;
   align-items: center; }
   @media screen and (max-width: 768px) {
     .team__item--active .team__desc {
@@ -1277,7 +1277,8 @@ html, body {
 .menu-burgers__list {
   display: flex;
   height: 100%;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  z-index: 100; }
 
 .menu-burgers__item {
   display: flex; }
@@ -1321,8 +1322,24 @@ html, body {
 .menu-burgers__item.menu-burgers__item--active .menu-burgers__link-text {
   color: #f9b43b; }
 
-.menu-burgers__text {
+@media screen and (max-width: 480px) {
+  .menu-burgers__item.menu-burgers__item--active {
+    width: 100%;
+    order: 1;
+    flex-shrink: 0; } }
+
+.menu-burgers__content {
+  width: 0;
+  overflow: hidden; }
+
+.menu-burgers__item--active .menu-burgers__content {
   width: 34.375rem;
+  display: flex; }
+  @media screen and (max-width: 768px) {
+    .menu-burgers__item--active .menu-burgers__content {
+      width: 100%; } }
+
+.menu-burgers__text {
   padding: 3.75rem 1.875rem;
   font-family: Ubuntu;
   font-size: 0.875rem;
@@ -1331,16 +1348,26 @@ html, body {
   line-height: 1.71;
   letter-spacing: normal;
   text-align: left;
-  color: #fff;
+  color: rgba(255, 255, 255, 0);
   background-color: #2f3234;
-  opacity: 0.9;
-  display: none; }
-  @media screen and (max-width: 480px) {
-    .menu-burgers__text {
-      width: 90%; } }
+  opacity: 0.3;
+  transition: color .3s;
+  overflow: hidden; }
 
 .menu-burgers__item--active .menu-burgers__text {
-  display: flex; }
+  display: flex;
+  overflow: hidden;
+  opacity: 1;
+  color: white;
+  transition: color 2.5s; }
+
+@media screen and (max-width: 480px) {
+  .menu-burgers__item--active .menu-burgers__cross {
+    visibility: visible; } }
+
+.menu-burgers__cross {
+  position: absolute;
+  visibility: hidden; }
 
 .form {
   background: url("../img/bg/form-bg-texture.png") 50% no-repeat;
