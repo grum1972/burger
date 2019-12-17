@@ -111,3 +111,51 @@ function closeVertAcco() {
  	})
  };
 closeVertAcco() ;
+
+
+
+function sliderMenu() {
+	const left = document.querySelector(".burgers__arrow--left");
+	const right = document.querySelector(".burgers__arrow--right");
+	const slider = document.querySelector(".burgers__list");
+	const itemCount = document.querySelectorAll(".burgers__item").length;
+	let pos = 0;
+	let flag = true;
+
+	function setTransform(ms = 100) {
+		if (flag) {
+			flag = false;
+			let pos_transform = (-pos * slider.offsetWidth) + "px";
+			slider.style.transform = "translateX("+pos_transform+")";
+			setTimeout(() => flag = true ,ms);
+	}
+}
+
+	function prev() {
+		pos == 0 ? pos = itemCount -1 : pos--;
+		setTransform(200);
+	}	
+
+	function next() {
+		pos ==  itemCount -1 ? pos = 0 : pos++;
+		setTransform(200);
+	}
+
+	left.addEventListener('click',e => {
+		e.preventDefault();
+		prev();
+	});
+
+	right.addEventListener('click',e => {
+		e.preventDefault();
+		next();
+	});
+
+	window.addEventListener('resize',e => {
+		e.preventDefault();
+		setTransform(0);
+	});
+
+}
+
+sliderMenu();
