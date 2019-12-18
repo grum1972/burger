@@ -1,24 +1,32 @@
 .dot-menu {
   position: fixed;
-  top: 90px;
-  right: 55px;
-  z-index: 10;
+  top: rem(90px);
+  right: rem(55px);
+	z-index: 105;
+	
+	@include phones {
+		display: none;
+	}
+
+	@include tablets {
+		display: none;
+	}
 }
 
 .dot-menu__dot {
   display: block;
-  height: 16px;
-  width: 16px;
+  height: rem(16px);
+  width: rem(16px);
   border-radius: 50%;
-  border: 1px solid transparent;
-  margin-bottom: 5px;
+  border: rem(1px) solid transparent;
+  margin-bottom: rem(5px);
 	position: relative; 
 }
 
 .dot-menu__dot:before {
   content: '';
-  width: 6px;
-  height: 6px;
+  width: rem(6px);
+  height: rem(6px);
   background-color: $white;
   border-radius: 50%;
   position: absolute;
@@ -27,6 +35,6 @@
   transform: translate(-50%, -50%);
 }
 
-.dot-menu__dot--active {
+.dot-menu__dot--active, .dot-menu__dot:hover {
 	border-color: $white;
 }

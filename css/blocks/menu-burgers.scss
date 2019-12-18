@@ -1,0 +1,124 @@
+.menu-burgers {
+	background: url("../img/bg/hamburger_bg.jpg") 50% no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.title__menu-burgers {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	
+}
+
+.menu-burgers__list {
+	display: flex;
+	height: 100%;
+	justify-content: flex-end;
+	z-index: 100;
+}
+
+.menu-burgers__item {
+		display: flex;
+	}
+
+	.menu-burgers__link {
+		width: rem(80px);
+		@include phones {
+			width: rem(64px);
+		}
+		height: 100%;
+		text-decoration: none;
+		background-image: url('../img/bg/menu_burgers_meet.png');
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		position: relative;
+	}
+
+.menu-burgers__link-text {
+	font-size: rem(40px); 
+	color: #fff;
+	font-family: Gagalin;
+	font-weight: normal;
+	text-align: center;
+	white-space: nowrap;
+	position: absolute;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  margin-top: rem(-40px);
+}	
+
+.menu-burgers__link--meat {
+	background-image: url('../img/bg/menu_burgers_meet.png');
+}
+.menu-burgers__link--veg {
+	background-image: url('../img/bg/menu_burgers.png');
+}
+.menu-burgers__link--diet {
+	background-image: url('../img/bg/burgers_menu_diet.png');
+}
+.menu-burgers__item {
+	&.menu-burgers__item--active {
+		.menu-burgers__link-text {
+			color: $yellow;
+		}
+		@include phones {
+			width: 100%;
+			order: 1;
+			flex-shrink: 0;
+		}
+	}
+}
+
+.menu-burgers__content {
+	width: 0; 
+	overflow: hidden;
+}
+
+.menu-burgers__item--active .menu-burgers__content {
+	width: rem(550px); 
+	display: flex;
+	@include tablets {
+		width: 100%;
+ }
+
+}
+
+
+.menu-burgers__text {
+	  padding: rem(60px) rem(30px);
+		font-family: Ubuntu;
+  	font-size: rem(14px);
+  	font-weight: 300;
+  	font-style: normal;
+  	line-height: 1.71;
+  	letter-spacing: normal;
+		text-align: left;
+		color: rgba(255,255,255,0);
+		background-color: $dark-grey;
+		opacity: 0.3;
+		transition: color .3s;
+		overflow: hidden;
+}
+
+.menu-burgers__item--active .menu-burgers__text{
+	display: flex;
+	overflow: hidden;
+	opacity: 1;
+	color: rgba(255,255,255,1);
+	transition: color 2.5s;
+}
+
+.menu-burgers__item--active .menu-burgers__cross {
+	@include phones {
+		visibility: visible;
+ }
+}
+
+.menu-burgers__cross {
+	position: absolute;
+	visibility: hidden;
+}
