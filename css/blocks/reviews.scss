@@ -48,6 +48,7 @@
   font-style: normal;
   line-height: 1.71;
 	text-align: left;
+	z-index: 200;
 
 	@include tablets {
 		display: flex;
@@ -74,6 +75,7 @@
 .btn--reviews {
 	margin-top: rem(17px);
 	background: $dark-grey;
+	z-index: 205;
 
 	&:hover {
 		background: #1f2122;

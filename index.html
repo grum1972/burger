@@ -165,7 +165,7 @@
 												<div class="burgers__td2">Говядина</div>
 												<div class="burgers__td3">300 г</div>
 											</div>
-											<div class="burgers__tr"> 
+											<div class="burgers__tr">
 												<div class="burgers__td1">
 													<img src="./img/icons/buns.svg" alt="Говядина" class="burgers__composition-img">
 												</div>
@@ -199,7 +199,7 @@
 												</div>
 												<div class="burgers__td2">Сыр</div>
 												<div class="burgers__td3">80 г</div>
-											</div> 
+											</div>
 										</div>
 										<div class="burgers__icon"></div>
 										<div class="burgers__icon-text">Состав</div>
@@ -449,9 +449,10 @@
 				<li class="reviews__item">
 					<img class="reviews__photo" src="./img/content/review_ph1.jpg" alt="Фотография №1">
 					<div class="reviews__hover">
-						<div class="reviews__name">Константин Спилберг</div>
+						<div class="reviews__name">Джулия Робертс</div>
 						<div class="reviews__desc">
 							<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что
+								булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что
 								булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
 							</p>
 						</div>
@@ -555,11 +556,11 @@
 							<div class="form__row">
 								<label class="form__label">
 									<span class="form__label-title">Имя</span>
-									<input type="text" class="form__input" placeholder="">
+									<input type="text" class="form__input" placeholder="" name="name">
 								</label>
 								<label class="form__label">
 									<span class="form__label-title">Телефон</span>
-									<input type="text" class="form__input" placeholder="89212264923">
+									<input type="text" class="form__input" placeholder="89212264923" name="phone">
 								</label>
 							</div>
 							<div class="form__row">
@@ -591,7 +592,7 @@
 							<div class="form__row form__row--textarea">
 								<label class="form__label">
 									<span class="form__label-title">Комментарий</span>
-									<textarea class="form__textarea form__input" placeholder=""></textarea>
+									<textarea class="form__textarea form__input" placeholder="" name="comment"></textarea>
 								</label>
 							</div>
 							<div class="form__row">
@@ -703,7 +704,31 @@
 			</li>
 		</ul>
 	</div>
+	<script type="template" id="overlayTemplate1">
+		<div class="overlay">
+			<div class="overlay__container">
+				<div class="overlay__content"></div>
+				<button class="btn overlay__close">Закрыть</button>
+			</div>
+		</div>
+	</script>
+	<script type="template" id="overlayTemplate">
+		<div class="overlay">
+			<div class="overlay__container">
+				<a class="overlay__close close" href="#">x</a>	
+				<div class="overlay__content overlay__content-reviews">
+					<div class="overlay__content-name"></div>
+					<div class="overlay__content-desc"></div>	
+				</div>
+			</div>
+		</div>
+	</script>
 	<script src="./main.js"></script>
+	<!-- Оверлей -->
+	<!-- <button class="openOverlay">открыть</button> -->
+
+
+
 </body>
 
 </html>

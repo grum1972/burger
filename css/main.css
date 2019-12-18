@@ -479,6 +479,64 @@ html, body {
   .btn--header {
     margin-right: 3.75rem; } }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0005;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; }
+
+.overlay__container {
+  position: relative;
+  background: #fff;
+  border-radius: 0.3125rem;
+  padding: 1.25rem;
+  color: #2f3234;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.overlay__content {
+  font-family: Ubuntu;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: left;
+  margin-bottom: 0.9375rem; }
+
+.overlay__content-reviews {
+  width: 28.75rem; }
+
+.overlay__content-name {
+  font-family: Gagalin;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal; }
+
+.close {
+  font: 1rem Helvetica, sans-serif;
+  color: #e45028;
+  position: absolute;
+  right: 0.9375rem;
+  top: 0.9375rem;
+  background: transparent;
+  border-radius: 50%;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  opacity: 0.7;
+  line-height: 0.9375rem;
+  text-align: center;
+  text-decoration: none; }
+
 .hamburgers-menu {
   background-color: #2f3234;
   position: fixed;
@@ -1135,7 +1193,8 @@ html, body {
   font-weight: 300;
   font-style: normal;
   line-height: 1.71;
-  text-align: left; }
+  text-align: left;
+  z-index: 200; }
   @media screen and (max-width: 768px) {
     .reviews__hover {
       display: flex;
@@ -1155,7 +1214,8 @@ html, body {
 
 .btn--reviews {
   margin-top: 1.0625rem;
-  background: #2f3234; }
+  background: #2f3234;
+  z-index: 205; }
   .btn--reviews:hover {
     background: #1f2122; }
 

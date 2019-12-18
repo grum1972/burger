@@ -110,7 +110,7 @@ function closeVertAcco() {
 		}	
  	})
  };
-closeVertAcco() ;
+//closeVertAcco() ;
 
 
 
@@ -159,3 +159,93 @@ function sliderMenu() {
 }
 
 sliderMenu();
+// Оверлей
+
+
+
+function createOverlay(template) {
+  const fragment = document.createElement('div');
+
+  fragment.innerHTML = template;
+
+  const overlayElement = fragment.querySelector(".overlay");
+  const closeElement = fragment.querySelector(".overlay__close");
+	const contentElementname = fragment.querySelector(".overlay__content-name");
+	const contentElementdesc = fragment.querySelector(".overlay__content-desc");
+	const contentElement = fragment.querySelector(".overlay__content");
+  
+  
+  overlayElement.addEventListener("click",e => {
+    if (e.target === overlayElement) {
+			e.preventDefault();
+			closeElement.click();
+    }
+  });
+  closeElement.addEventListener("click", (e) => {
+		e.preventDefault();
+    document.body.removeChild(overlayElement);
+  });
+
+  return {
+    open() {
+      document.body.appendChild(overlayElement);
+    },
+    close() {
+      closeElement.click();
+    },
+    setContent(content,content1) {
+			contentElementname.innerHTML = content;
+			contentElementdesc.innerHTML = content1;
+		},
+		setContent1(content) {
+			contentElement.innerHTML = content;
+		}
+  };
+}
+
+const reviewButton = document.querySelector(".reviews__list"); //btn--reviews
+const formButton = document.querySelector(".form__button").firstElementChild; //btn--forms
+
+reviewButton.addEventListener('click',e => {
+	e.preventDefault();
+	if (e.target.classList.contains("btn--reviews")) {
+	const name = e.target.parentElement.querySelector(".reviews__name").innerHTML; 
+	const desc = e.target.parentElement.querySelector(".reviews__desc").innerHTML; 
+	let template = document.querySelector("#overlayTemplate").innerHTML;
+  let overlay = createOverlay(template);
+  overlay.open();
+  overlay.setContent(name, desc);}
+});
+
+formButton.addEventListener('click',e => {
+	e.preventDefault();
+	let template = document.querySelector("#overlayTemplate1").innerHTML;
+	let overlay = createOverlay(template);
+	overlay.open();
+  overlay.setContent1(sendForm());
+ });
+
+ function sendForm() {
+	const myForm = document.querySelector(".form__content");
+	const myData = new FormData();
+	const formName = myForm.elements.name.value;
+	const formPhone = myForm.elements.phone.value;
+	const formComment = myForm.elements.comment.value;
+	
+	myData.append('name',formName);
+	myData.append('phone', formPhone);
+	myData.append('comment',formComment);
+	myData.append('to',"grum1972@gmail.com");
+		
+	const xhr = new XMLHttpRequest();
+	xhr.open('POST','https://webdev-api.loftschool.com/sendmail');
+	xhr.send(myData);
+	xhr.responseType = 'json';
+	let message = "Ошибка отправки";
+	xhr.addEventListener('load', () => {
+				if (xhr.response.status === 1) {
+			message = xhr.response.message;
+		}	
+	});
+	return message;
+ };
