@@ -249,3 +249,18 @@ formButton.addEventListener('click',e => {
 	});
 	return message;
  };
+
+  function menuComposition () {
+ 	const menuComp = document.querySelector('.burgers__composition');
+	 const menuPopup = document.querySelector('.burgers__composition-menu');
+	 console.log(menuComp);
+	 console.log(menuPopup);
+ 	menuComp.addEventListener ('mouseover',e =>  {
+ 		menuPopup.style.visibility = 'visible';
+ 	} );
+ 	menuComp.addEventListener ('mouseout',e => {
+ 		menuPopup.style.visibility = 'hidden';
+ 	});
+ }
+
+menuComposition();
