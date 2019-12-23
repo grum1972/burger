@@ -1,7 +1,5 @@
-
-.hamburgers-menu{
+.hamburgers-menu {
 	background-color: $dark-grey;
-	// justify-content: flex-start;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -10,130 +8,130 @@
 	visibility: hidden;
 	display: flex;
 	flex-direction: column;
-  justify-content: center;
+	justify-content: center;
 
 }
 
 @include tablets {
-.hamburger-menu__btn {
+	.hamburger-menu__btn {
+		width: rem(25px);
+		height: rem(4px);
+		border-radius: rem(1px);
+		background: $white;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+		position: fixed;
+		top: rem(42px);
+		right: rem(20px);
+		z-index: 300;
+
+		&:after {
+			content: "";
+			display: block;
+			width: rem(25px);
+			height: rem(4px);
+			background: $white;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+			border-radius: rem(1px);
+			position: absolute;
+			top: 100%;
+			margin-top: rem(4px);
+		}
+
+		&:before {
+
+			content: "";
+			display: block;
+			width: rem(25px);
+			height: rem(4px);
+			background: $white;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+			border-radius: rem(1px);
+			position: absolute;
+			bottom: 100%;
+			margin-bottom: rem(4px);
+		}
+	}
+}
+
+.hamburger-menu__btn--cross {
 	width: rem(25px);
 	height: rem(4px);
 	border-radius: rem(1px);
-	background:$white;
-	box-shadow: 0 0 5px rgba(0,0,0,0.5);	
+	background: transparent;
 	position: fixed;
-	top: rem(42px);
 	right: rem(20px);
-	z-index: 300;
-	
-	&:after{
-		content : "";
-		display: block;
-		width: rem(25px);
-		height: rem(4px);
-		background:$white	;	
-		box-shadow: 0 0 5px rgba(0,0,0,0.5);
-		border-radius: rem(1px);
-		position: absolute ;
-		top: 100%;
-		margin-top: rem(4px);
-	}
-	
-	&:before{
+	top: rem(42px);
 
-		content : "";
+	&:after {
+		content: "";
 		display: block;
-		width: rem(25px);
+		width: rem(26px);
 		height: rem(4px);
-		background:$white;	
-		box-shadow: 0 0 5px rgba(0,0,0,0.5);
 		border-radius: rem(1px);
+		background: $white;
+		position: absolute;
+		top: 100%;
+		margin-top: rem(-4px);
+		transform: rotate(45deg);
+		transition: rotate 2s;
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		width: rem(26px);
+		height: rem(4px);
+		border-radius: rem(1px);
+		background: $white;
 		position: absolute;
 		bottom: 100%;
-		margin-bottom: rem(4px);
-	}
+		margin-bottom: rem(-4px);
+		transform: rotate(-45deg);
+		transition: rotate 2s;
 	}
 }
-	.hamburger-menu__btn--cross {
-		width: rem(25px);
-		height: rem(4px);
-		border-radius: rem(1px);
-		background: transparent;	
-		position: fixed;
-		right: rem(20px);
-		top: rem(42px);
-
-		&:after{
-			content : "";
-			display: block;
-			width: rem(26px);
-			height: rem(4px);
-			border-radius: rem(1px);
-			background:$white;	
-			position: absolute;
-			top: 100%;
-			 margin-top: rem(-4px);
-			 transform	: rotate(45deg);
-			 transition: rotate 2s;
-		}
-		
-		&:before{
-			content : "";
-			display: block;
-			width: rem(26px);
-			height: rem(4px);
-			border-radius: rem(1px);
-			background:$white;	
-			position: absolute;
-			bottom: 100%;
-			margin-bottom: rem(-4px);
-			transform	: rotate(-45deg);
-			transition: rotate 2s;
-		}
-		}
 
 
- .hamburger-menu {
-	//  margin-top: rem(100px);
-	 display: flex;
-	 justify-content: center;
-	}
+.hamburger-menu {
+	display: flex;
+	justify-content: center;
+}
 
 .hamburger-menu__list {
-	 display: flex;
-	 flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	font-family: Ubuntu;
-  font-size: rem(24px); //24
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.67;
+	font-size: rem(24px);
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.67;
 }
 
-.hamburger-menu__item{
+.hamburger-menu__item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	position: relative;
 	margin-bottom: rem(20px);
-	
-	&:before{
-	content: "";
-	width: rem(4px);
-  height: rem(4px);
-	background-color: $white;
-  border-radius: 50%;
-	display: block;
-	margin-bottom: rem(20px);
-  
+
+	&:before {
+		content: "";
+		width: rem(4px);
+		height: rem(4px);
+		background-color: $white;
+		border-radius: 50%;
+		display: block;
+		margin-bottom: rem(20px);
 	}
 
 	&:first-child:before {
 		content: "";
 		display: none;
 	}
-	&:last-child{
+
+	&:last-child {
 		margin-right: 0;
 	}
 }

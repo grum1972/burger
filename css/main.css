@@ -1426,14 +1426,12 @@ html, body {
 .team__desc {
   padding-top: 0.875rem;
   height: 0px;
-  overflow: hidden;
-  transition: height 0.5s; }
+  display: flex;
+  overflow: hidden; }
 
 .team__item--active .team__desc {
   padding-top: 0.875rem;
-  display: flex;
   overflow: hidden;
-  transition: height 0.5s;
   align-items: center; }
   @media screen and (max-width: 768px) {
     .team__item--active .team__desc {

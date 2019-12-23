@@ -15,14 +15,6 @@ function hamburgerMenu() {
 		menuClose();
 	});
 
-
-	//  hambmenu.addEventListener("keydown", e => {
-	//  e.preventDefault();
-	// 	if (e.keyCode === 27) {
-	//  		menuClose();
-	//  	}
-	//  });
-
 	function menuOpen() {
 		menu.style.visibility = "hidden";
 		hambmenu.style.visibility = "visible";
@@ -58,7 +50,8 @@ function controlHorizAcco() {
 			if (!curActive || curActive.querySelector(".team__member") !== target) {
 				target.parentElement.classList.add("team__item--active");
 				let currentDesc = target.parentElement.querySelector(".team__desc");
-				currentDesc.style.height = currentDesc.scrollHeight + "px";
+				// currentDesc.style.height = currentDesc.scrollHeight + "px";
+				currentDesc.style.height = "100%";
 			}
 		}
 	})
@@ -263,9 +256,6 @@ function sendForm() {
 	return message;
 };
 
-
-
-
 // Карты яндекс
 
 ymaps.ready(init);
@@ -369,8 +359,7 @@ $(document).ready(function () {
 			performTransition(prevSection.index());
 		}
 	}
-	// performTransition(3);
-
+	
 	$(window).on("wheel", e => {
 		const deltaY = e.originalEvent.deltaY;
 
