@@ -79,7 +79,10 @@
 		left: 100%;
 		width: rem(270px);
 		@include phones {
-			width: rem(370px);
+			width: rem(360px);
+			margin-right: rem(20px);
+			z-index:500;
+			
 		}
 		padding: rem(20px);
 		border-radius: rem(5px);
@@ -92,7 +95,10 @@
 	}
 	.burgers__tr {
 		display: flex;
-		width: 100%;
+		// width: 100%;
+		@include phones {
+			margin-right: rem(30px);
+		}
 		align-items: center;
 		justify-content: flex-start;
 		margin-bottom: rem(10px);
@@ -106,6 +112,26 @@
   	line-height: 1.71;
   	}
 	.burgers__composition-img {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.burgers__composition-cross {
+		position: absolute;
+		right: rem(-9999px);
+		@include phones {
+		right: rem(10px);
+		top: rem(10px);
+		}
+	}
+
+	.burgers__composition-cross-img {
+		width: rem(20px);
+		height: rem(20px);
+		object-fit: cover;
+	}
+
+	.burgers__td1 {
 		width: rem(48px);
 		height: rem(40px);	
 	}
