@@ -1,28 +1,37 @@
 .menu {
+	
+	@include tablets {
+		display: none;
+	}
+
+	@include phones {
+		display: none;
+	}
+	
 	flex-grow: 1;
-	margin-left: 70px;
+	margin-left: rem(70px);
 	display: flex;
 	justify-content:space-between;
 }
 
-.menu-list {
+.menu__list {
 	display: flex;
 }
 
 .menu__item{
 	display: flex;
 	align-items: center;
-	margin-right: 17px;
+	margin-right: rem(17px);
 	position: relative;
 	
 	&:before{
 	content: "";
-	width: 4px;
-  height: 4px;
+	width: rem(4px);
+  height: rem(4px);
 	background-color: $white;
   border-radius: 50%;
   display: block;
-  margin-right: 15px;
+  margin-right: rem(15px);
 	}
 
 	&:first-child:before {
@@ -38,6 +47,6 @@
 	text-decoration: none;
 	color: $white;
 	font-family: 'Ubuntu';
-	font-size: 13px;
+	font-size: rem(13px);
 	text-transform: uppercase;
 }
