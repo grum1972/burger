@@ -263,21 +263,9 @@ function sendForm() {
 	return message;
 };
 
-function menuComposition() {
-	const menuComp = document.querySelectorAll('.burgers__composition');
-	menuComp.forEach((item,i) => {
-		const menuPopup = item.querySelector('.burgers__composition-menu');
-		item.addEventListener('mouseover', e => {
-			menuPopup.style.visibility = 'visible';
-		});
-		item.addEventListener('mouseout', e => {
-			menuPopup.style.visibility = 'hidden';
-		});
-	})
 
-}
 
-menuComposition();
+
 // Карты яндекс
 
 ymaps.ready(init);
@@ -527,5 +515,21 @@ $(document).ready(function () {
 	function changeSoundVolume() {
 		video.volume = soundControl.value / MAX_SOUND_VALUE;
 	}
+
+	function menuComposition() {
+		let compositions = $(".burgers__composition");
+		compositions.on("mouseover", e => {
+			$(".burgers__composition-menu").css({
+				visibility: "visible"
+			});
+		});
+		compositions.on("mouseout", e => {
+			$(".burgers__composition-menu").css({
+				visibility: "hidden"
+			});
+		});
+	}
+
+	menuComposition();
 
 });
