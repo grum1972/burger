@@ -23,7 +23,7 @@
 	}
 
 	.menu-burgers__link {
-		width: rem(80px);
+		width: rem(75px);
 		@include phones {
 			width: rem(64px);
 		}
@@ -34,6 +34,7 @@
 		background-position: center center;
 		background-repeat: no-repeat;
 		position: relative;
+		
 	}
 
 .menu-burgers__link-text {
@@ -76,13 +77,17 @@
 .menu-burgers__content {
 	width: 0; 
 	overflow: hidden;
+	display: flex;
+	
 }
 
 .menu-burgers__item--active .menu-burgers__content {
 	width: rem(550px); 
 	display: flex;
+	flex:1;
 	@include tablets {
-		width: 100%;
+	width: 100%;
+	
  }
 
 }
@@ -114,7 +119,8 @@
 
 .menu-burgers__item--active .menu-burgers__cross {
 	@include phones {
-		visibility: visible;
+		 visibility: visible;
+	
  }
 }
 
@@ -122,3 +128,4 @@
 	position: absolute;
 	visibility: hidden;
 }
+

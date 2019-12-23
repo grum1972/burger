@@ -9,6 +9,7 @@ $orange-two: #e35028;
 //normalize
 @import "./setup/normalize.scss";
 
+
 //setups
 @import "./setup/media.scss";
 @import "./setup/font.scss";
@@ -17,6 +18,7 @@ $orange-two: #e35028;
 
 
 //blocks
+
 @import "./blocks/header.scss";
 @import "./blocks/overlay.scss";
 @import "./blocks/hamburger-menu.scss";
@@ -28,6 +30,7 @@ $orange-two: #e35028;
 @import "./blocks/best.scss";
 @import "./blocks/burgers.scss";
 @import "./blocks/reviews.scss";
+@import "./blocks/player.scss";
 @import "./blocks/team.scss";
 @import "./blocks/menu-burgers.scss";
 @import "./blocks/form.scss";

@@ -8,6 +8,10 @@
 	width: 100%;
 	height: 0;
 	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+
 }
 
 @include tablets {
@@ -15,9 +19,12 @@
 	width: rem(25px);
 	height: rem(4px);
 	border-radius: rem(1px);
-	background:$white;	
+	background:$white;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);	
 	position: fixed;
+	top: rem(42px);
 	right: rem(20px);
+	z-index: 300;
 	
 	&:after{
 		content : "";
@@ -25,6 +32,7 @@
 		width: rem(25px);
 		height: rem(4px);
 		background:$white	;	
+		box-shadow: 0 0 5px rgba(0,0,0,0.5);
 		border-radius: rem(1px);
 		position: absolute ;
 		top: 100%;
@@ -38,6 +46,7 @@
 		width: rem(25px);
 		height: rem(4px);
 		background:$white;	
+		box-shadow: 0 0 5px rgba(0,0,0,0.5);
 		border-radius: rem(1px);
 		position: absolute;
 		bottom: 100%;
@@ -52,7 +61,7 @@
 		background: transparent;	
 		position: fixed;
 		right: rem(20px);
-		top: rem(40px);
+		top: rem(42px);
 
 		&:after{
 			content : "";
@@ -85,7 +94,7 @@
 
 
  .hamburger-menu {
-	 margin-top: rem(100px);
+	//  margin-top: rem(100px);
 	 display: flex;
 	 justify-content: center;
 	}
@@ -95,7 +104,7 @@
 	 flex-direction: column;
 	align-items: center;
 	font-family: Ubuntu;
-  font-size: rem(24px);
+  font-size: rem(24px); //24
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -133,6 +142,6 @@
 	text-decoration: none;
 	color: $white;
 	font-family: 'Ubuntu';
-	font-size: rem(13px);
+	font-size: rem(24px);
 	text-transform: uppercase;
 }

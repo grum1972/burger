@@ -28,13 +28,15 @@
   width: rem(6px);
   height: rem(6px);
   background-color: $white;
-  border-radius: 50%;
+	border-radius: 50%;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.dot-menu__dot--active, .dot-menu__dot:hover {
+.dot-menu__dot--active .dot-menu__dot , .dot-menu__dot:hover{
 	border-color: $white;
+	box-shadow: 0 0 5px rgba(0,0,0,0.7);
 }

@@ -41,6 +41,10 @@
 		padding-top: rem(90px);
 		position: relative;
 	}
+	@include phones {
+		padding-top: rem(90px);
+		position: relative;
+	}
 }
 
 .burgers__pic {
@@ -64,7 +68,9 @@
 	bottom: 0;
 	}
 	@include phones {
-		margin-left: -25%;
+		bottom:  0;
+		left: -50%;
+		
 		}
 	}
 

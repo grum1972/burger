@@ -4,8 +4,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #0005;
-  display: flex;
+	background: $dark-grey;
+	background: rgba(47,50,52,.92);
+	display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10000;
