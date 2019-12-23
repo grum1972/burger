@@ -1254,7 +1254,7 @@ html, body {
       display: none; } }
 
 .player {
-  background: url("/img/bg/how_work_bg.jpg") center center/cover no-repeat; }
+  background: url("../img/bg/how_work_bg.jpg") center center/cover no-repeat; }
 
 .player__container {
   width: 80%;
@@ -1281,7 +1281,7 @@ html, body {
 .player__main-btn {
   width: 5rem;
   height: 7.3125rem;
-  background: url("/img/icons/play_white.png") center center/cover no-repeat;
+  background: url("../img/icons/play_white.png") center center/cover no-repeat;
   position: absolute;
   top: 50%;
   left: 50%;
